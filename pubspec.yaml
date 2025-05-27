@@ -1,0 +1,20 @@
+name: calculadora_lucro_v2
+description: Aplicativo para calcular preço de venda com lucro desejado.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.0 <4.0.0' # Ajuste conforme sua versão do Flutter/Dart
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6 # Ou a versão mais recente que o Android Studio sugerir
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0 # Ou a versão mais recente
+
+flutter:
+  uses-material-design: true
