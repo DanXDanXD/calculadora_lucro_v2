@@ -39,8 +39,10 @@ class MyApp extends StatelessWidget {
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.teal.shade600,
               foregroundColor: Colors.white,
-              padding: const EdgeInsets.symmetric(vertical: 14.0, horizontal: 24.0),
-              textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+              padding:
+                  const EdgeInsets.symmetric(vertical: 14.0, horizontal: 24.0),
+              textStyle:
+                  const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8.0),
               ),
@@ -63,13 +65,14 @@ class MyApp extends StatelessWidget {
             selectedLabelStyle: const TextStyle(fontWeight: FontWeight.w500),
           ),
           textTheme: TextTheme(
-            headlineSmall: TextStyle(fontWeight: FontWeight.bold, color: Colors.teal.shade900),
-            titleLarge: TextStyle(color: Colors.teal.shade800, fontWeight: FontWeight.w600),
-            titleMedium: TextStyle(color: Colors.black87, fontSize: 16),
+            headlineSmall: TextStyle(
+                fontWeight: FontWeight.bold, color: Colors.teal.shade900),
+            titleLarge: TextStyle(
+                color: Colors.teal.shade800, fontWeight: FontWeight.w600),
+            titleMedium: const TextStyle(color: Colors.black87, fontSize: 16),
             bodyMedium: TextStyle(color: Colors.grey.shade700, fontSize: 14),
             bodySmall: TextStyle(color: Colors.grey.shade600, fontSize: 12),
-          )
-      ),
+          )),
       home: const MainScreen(),
       debugShowCheckedModeBanner: false,
     );
@@ -87,10 +90,10 @@ class _MainScreenState extends State<MainScreen> {
   int _selectedIndex = 0;
 
   static const List<Widget> _widgetOptions = <Widget>[
-    const MercadoLivreScreen(),
-    const ShopeeScreen(),
-    const SheinScreen(),
-    const AmazonScreen(),
+    MercadoLivreScreen(),
+    ShopeeScreen(),
+    SheinScreen(),
+    AmazonScreen(),
   ];
 
   void _onItemTapped(int index) {
@@ -129,26 +132,28 @@ class _MainScreenState extends State<MainScreen> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
-          const BottomNavigationBarItem(
-            icon: const Icon(Icons.store_mall_directory_outlined), // Mercado Livre Icon
+          BottomNavigationBarItem(
+            icon:
+                Icon(Icons.store_mall_directory_outlined), // Mercado Livre Icon
             label: 'Mercado Livre',
           ),
-          const BottomNavigationBarItem(
-            icon: const Icon(Icons.shopping_bag_outlined), // Shopee Icon
+          BottomNavigationBarItem(
+            icon: Icon(Icons.shopping_bag_outlined), // Shopee Icon
             label: 'Shopee',
           ),
-          const BottomNavigationBarItem(
-            icon: const Icon(Icons.checkroom_outlined), // Shein Icon
+          BottomNavigationBarItem(
+            icon: Icon(Icons.checkroom_outlined), // Shein Icon
             label: 'Shein',
           ),
-          const BottomNavigationBarItem(
-            icon: const Icon(Icons.storefront_outlined), // Amazon Icon
+          BottomNavigationBarItem(
+            icon: Icon(Icons.storefront_outlined), // Amazon Icon
             label: 'Amazon',
           ),
         ],
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
-        type: BottomNavigationBarType.fixed, // Para garantir que todos os labels apareçam
+        type: BottomNavigationBarType
+            .fixed, // Para garantir que todos os labels apareçam
       ),
     );
   }
