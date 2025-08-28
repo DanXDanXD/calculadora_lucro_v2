@@ -160,7 +160,7 @@ class _ShopeeScreenState extends State<ShopeeScreen> {
                   });
                   _limparResultados();
                 },
-                activeColor: Colors.teal.shade600,
+                activeThumbColor: Colors.teal.shade600,
                 contentPadding: EdgeInsets.zero,
               ),
               Padding(
@@ -210,8 +210,9 @@ class _ShopeeScreenState extends State<ShopeeScreen> {
         ],
         validator: (value) {
           if (value == null || value.isEmpty) return 'Campo obrigatório';
-          if (double.tryParse(value.replaceAll(',', '.')) == null)
+          if (double.tryParse(value.replaceAll(',', '.')) == null) {
             return 'Número inválido';
+          }
           return null;
         },
         onChanged: (_) => _limparResultados(),
